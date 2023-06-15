@@ -1,0 +1,15 @@
+<.header>
+  Note <%= @note.id %>
+  <:subtitle>This is a note record from your database.</:subtitle>
+  <:actions>
+    <.link href={~p"/notes/#{@note}/edit"}>
+      <.button>Edit note</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.list>
+  <:item title="Content"><%= @note.content %></:item>
+</.list>
+
+<.back navigate={~p"/notes"}>Back to notes</.back>
